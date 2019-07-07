@@ -1,0 +1,29 @@
+#first
+{
+	background-color: #413022;
+}
+
+#second
+{
+	background-color: #FF8300;
+}
+#third
+{
+	background-color: #00A65F;
+}
+form
+{
+	font-size: 30px;
+	color: white;
+	text-shadow: 1px 1px 10px grey;
+}
+
+.center div
+{
+	padding: 20px;
+}
+
+html body
+{
+	background-color: #ccc;	
+}

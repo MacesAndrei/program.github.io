@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+	
+		<link rel="stylesheet" href="style.css">
+		
+		<script src="script.js"></script>
+		
+		<meta name="viewport" content="width=device-width,initial-scale: 1.0">
+		
+		<meta charset="UTF-8">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		
+	</head>
+	
+	<body>
+	
+		<div class="center row">
+		
+		<div class="col-sm-4" id="first">	
+		
+			<form>
+				Cola:<br>
+				<input type="text" id="cola"></input>
+				<button type="button"  class="btn btn-primary" onclick="incrementCola()">+</button>
+				<button type="button"  class="btn btn-primary" onclick="decrementCola()">-</button>
+				<button type="button"  class="btn btn-primary" onclick="">Editare valori</button>
+			</form>
+			
+			</div>
+			
+		<div class="col-sm-4" id="second">	
+			
+			<form>
+				Fanta:<br>
+				<input type="text" id="fanta"></input>
+					<button type="button"  class="btn btn-primary" onclick="incrementFanta()">+</button>
+				<button type="button"  class="btn btn-primary" onclick="decrementFanta">-</button>
+				<button type="button"  class="btn btn-primary" onclick="">Editare valori</button>
+			</form>
+			
+			</div>
+			
+		<div class="col-sm-4" id="third">	
+		
+			
+			<form>
+				Sprite:<br>
+				<input type="text" id="sprite"></input>
+					<button type="button"  class="btn btn-primary" onclick="incrementSprite()">+</button>
+				<button type="button"  class="btn btn-primary" onclick="decrementSprite()">-</button>
+				<button type="button"  class="btn btn-primary" onclick="">Editare valori</button>
+			</form>
+		
+		</div>
+	
+		</div>
+	
+	<?php
+	
+	$cola = 0;
+	$fanta = 0;
+	$sprite = 0;
+	
+	$fcola = fopen("cola.txt", "w") or die("Unable to open file!");
+	$ffanta = fopen("fanta.txt", "w") or die("Unable to open file!");
+	$fsprite = fopen("sprite.txt", "w") or die("Unable to open file!");
+	
+	function incrementCola(){
+	
+		global $cola;
+	
+		$cola++;
+	
+	};
+	function decrementCola(){
+		
+		global $cola;
+	
+		if($cola>0)
+		$cola--;
+	};
+	
+	function incrementFanta(){
+	
+		global $fanta;
+	
+		$fanta++;
+	
+	};
+	function decrementFanta(){
+	
+		global $fanta;
+	
+		if($fanta>0)
+		$fanta--;
+	
+	};
+	
+	function incrementSprite(){
+	
+		global $sprite;
+	
+		$sprite++;
+	
+	};
+	function decrementSprite(){
+	
+		global $sprite;
+	
+		if($sprite>0)
+		$sprite--;
+	
+	};
+	
+	?>
+	
+	
+	
+	</body>
+
+</html>
+
